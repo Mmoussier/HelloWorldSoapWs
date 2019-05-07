@@ -5,6 +5,7 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import com.morgann.ws.HelloWorld;
 import com.morgann.client.wsdl.*;
+import com.morgann.ws.Job;
 
 public class HelloWorldClient{
 
@@ -22,6 +23,11 @@ public class HelloWorldClient{
         HelloWorld hello = service.getPort(HelloWorld.class);
 
         System.out.println(hello.getHelloWorldAsString("Appel manuel"));
+        hello.publishSchedule("Test");
+
+        Job job = new Job();
+        job.setReference("Job reference from client");
+        hello.updateJob(job);
 
         // ===================== Utilisation des classes générées par wsimport ============
         HelloWorldImplService helloService = new HelloWorldImplService();

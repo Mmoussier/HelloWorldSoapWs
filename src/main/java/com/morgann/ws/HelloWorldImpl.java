@@ -11,4 +11,14 @@ public class HelloWorldImpl implements HelloWorld{
         return "Hello World JAX-WS " + name;
     }
 
+    @Override
+    public void publishSchedule(String schedule) {
+        System.out.println("Appel de la méthode publishSchedule avec le paramètre schedule = " + schedule);
+    }
+
+    @Override
+    public void updateJob(Job job) {
+        System.out.println("Job '" + job.getReference() + "' updated.");
+    }
+
 }
