@@ -1,7 +1,7 @@
 package com.morgann.ws;
 
 public class Job {
-    private String reference;
+    protected String reference;
 
     public String getReference() {
         return reference;
