@@ -8,7 +8,7 @@ public class HelloWorldImpl implements HelloWorld{
 
     @Override
     public String getHelloWorldAsString(String name) {
-        return "Hello World JAX-WS " + name;
+        return "La chaîne '" + name + "' a été recue par le Web Service Hello World";
     }
 
     @Override
