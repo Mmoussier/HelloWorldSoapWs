@@ -1,6 +1,7 @@
 package com.morgann.ws;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.jws.soap.SOAPBinding.Style;
@@ -13,5 +14,5 @@ import javax.jws.soap.SOAPBinding.Style;
 public interface HelloWorld {
     @WebMethod String getHelloWorldAsString(String name);
     @WebMethod void publishSchedule(String schedule);
-    @WebMethod void updateJob(Job job);
+    @WebMethod void updateJob(@WebParam Job job);
 }

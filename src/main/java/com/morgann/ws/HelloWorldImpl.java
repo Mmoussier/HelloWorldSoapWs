@@ -1,5 +1,6 @@
 package com.morgann.ws;
 
+import javax.jws.WebParam;
 import javax.jws.WebService;
 
 //Service Implementation
@@ -17,7 +18,7 @@ public class HelloWorldImpl implements HelloWorld{
     }
 
     @Override
-    public void updateJob(Job job) {
+    public void updateJob(@WebParam Job job) {
         System.out.println("Job '" + job.getReference() + "' updated.");
     }
 
